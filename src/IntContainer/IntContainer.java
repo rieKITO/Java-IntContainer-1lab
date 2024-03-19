@@ -10,6 +10,13 @@ public class IntContainer {
         size = 0;
     }
 
+    public IntContainer(int initialCapacity) {
+        if (initialCapacity < 0)
+            throw new IllegalArgumentException("Illegal Capacity: " + initialCapacity);
+        array = new int[initialCapacity];
+        size = 0;
+    }
+
     public int getSize() {
         return size;
     }
