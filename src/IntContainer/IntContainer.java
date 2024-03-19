@@ -47,4 +47,11 @@ public class IntContainer {
             throw new IndexOutOfBoundsException("Index: " + elementIndex + ", Size: " + size);
         return array[elementIndex];
     }
+
+    public void printElements() {
+        StringBuilder elementsString = new StringBuilder();
+        for (int index = 0; index < size; ++index)
+            elementsString.append(array[index]).append(", ");
+        System.out.println(elementsString);
+    }
 }
