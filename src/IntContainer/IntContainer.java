@@ -23,8 +23,16 @@ public class IntContainer {
         }
     }
 
-    public void add(int number) {
+    public void addElement(int number) {
         ensureCapacity();
         array[size++] = number;
+    }
+
+    public void removeElementFromIndex(int elementIndex) {
+        if (elementIndex < 0 || elementIndex >= size)
+            throw new IndexOutOfBoundsException("Index: " + elementIndex + ", Size: " + size);
+        for (int index = elementIndex; index < size - 1; ++index)
+            array[index] = array[index + 1];
+        --size;
     }
 }
