@@ -35,4 +35,10 @@ public class IntContainer {
             array[index] = array[index + 1];
         --size;
     }
+
+    public int getElementFromIndex(int elementIndex) {
+        if (elementIndex < 0 || elementIndex >= size)
+            throw new IndexOutOfBoundsException("Index: " + elementIndex + ", Size: " + size);
+        return array[elementIndex];
+    }
 }
