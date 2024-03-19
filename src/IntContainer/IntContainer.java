@@ -30,9 +30,9 @@ public class IntContainer {
         }
     }
 
-    public void addElement(int number) {
+    public void addElement(int element) {
         ensureCapacity();
-        array[size++] = number;
+        array[size++] = element;
     }
 
     public void removeElementFromIndex(int elementIndex) {
