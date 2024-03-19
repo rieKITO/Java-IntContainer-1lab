@@ -10,6 +10,10 @@ public class IntContainer {
         size = 0;
     }
 
+    public int getSize() {
+        return size;
+    }
+
     private void ensureCapacity() {
         if (size == array.length) {
             int newCapacity = array.length * 2;
@@ -19,4 +23,8 @@ public class IntContainer {
         }
     }
 
+    public void add(int number) {
+        ensureCapacity();
+        array[size++] = number;
+    }
 }
