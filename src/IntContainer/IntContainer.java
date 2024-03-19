@@ -10,4 +10,13 @@ public class IntContainer {
         size = 0;
     }
 
+    private void ensureCapacity() {
+        if (size == array.length) {
+            int newCapacity = array.length * 2;
+            int[] newArray = new int[newCapacity];
+            System.arraycopy(array, 0, newArray, 0, size);
+            array = newArray;
+        }
+    }
+
 }
