@@ -38,8 +38,7 @@ public class IntContainer {
     public void removeElementFromIndex(int elementIndex) {
         if (elementIndex < 0 || elementIndex >= size)
             throw new IndexOutOfBoundsException("Index: " + elementIndex + ", Size: " + size);
-        for (int index = elementIndex; index < size - 1; ++index)
-            array[index] = array[index + 1];
+        System.arraycopy(array, elementIndex + 1, array, elementIndex, size - elementIndex - 1);
         --size;
     }
 
