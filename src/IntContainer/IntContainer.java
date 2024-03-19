@@ -52,6 +52,8 @@ public class IntContainer {
         StringBuilder elementsString = new StringBuilder();
         for (int index = 0; index < size; ++index)
             elementsString.append(array[index]).append(", ");
+        if (!elementsString.isEmpty())
+            elementsString.delete(elementsString.length() - 2, elementsString.length());
         System.out.println(elementsString);
     }
 }
