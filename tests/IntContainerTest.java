@@ -52,4 +52,14 @@ public class IntContainerTest {
             container.getElementFromIndex(2);
         });
     }
+
+    @Test
+    public void testRemoveElementFromIndexOutOfBounds() {
+        container.addElement(5);
+        container.addElement(10);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            container.removeElementFromIndex(2);
+        });
+    }
 }
