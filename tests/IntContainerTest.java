@@ -35,4 +35,11 @@ public class IntContainerTest {
         assertEquals(5, container.getElementFromIndex(0));
         assertEquals(15, container.getElementFromIndex(1));
     }
+
+    @Test
+    public void testAddElementWithNegativeCapacity() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            IntContainer container = new IntContainer(-1);
+        });
+    }
 }
