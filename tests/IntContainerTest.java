@@ -42,4 +42,14 @@ public class IntContainerTest {
             IntContainer container = new IntContainer(-1);
         });
     }
+
+    @Test
+    public void testGetElementFromIndexOutOfBounds() {
+        container.addElement(5);
+        container.addElement(10);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            container.getElementFromIndex(2);
+        });
+    }
 }
